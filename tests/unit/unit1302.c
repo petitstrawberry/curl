@@ -146,7 +146,7 @@ static CURLcode test_unit1302(const char *arg)
   /* Unused bits in the last quantum have historically been ignored. */
   struct etest noncanonical[] = {
     { "f", 1, "Zh==", 4 },
-    { "fo", 2, "Zm9=", 4 },
+    { "fo", 2, "Zm9=", 4 }, /* spellchecker:disable-line */
     { "\xff", 1, "/x==", 4 },
     { "\xff\xff", 2, "//9=", 4 }
   };
