@@ -31,7 +31,9 @@
 #include "asyn.h"
 #include "httpsrr.h"
 
+#ifdef USE_ALARM_TIMEOUT
 #include <setjmp.h>
+#endif
 
 #ifdef USE_HTTPSRR
 # include <stdint.h>

@@ -41,9 +41,13 @@
 #include <inet.h>
 #endif
 
+#ifdef USE_ALARM_TIMEOUT
 #include <setjmp.h>
+#endif
 #ifndef UNDER_CE
+#ifdef USE_ALARM_TIMEOUT
 #include <signal.h>
+#endif
 #endif
 
 #include "urldata.h"

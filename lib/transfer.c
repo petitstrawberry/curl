@@ -40,7 +40,9 @@
 #include <sys/ioctl.h>
 #endif
 #ifndef UNDER_CE
+#if defined(HAVE_SIGNAL) && defined(SIGPIPE) && !defined(HAVE_MSG_NOSIGNAL)
 #include <signal.h>
+#endif
 #endif
 
 #ifdef HAVE_SYS_PARAM_H
