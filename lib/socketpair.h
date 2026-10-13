@@ -54,7 +54,7 @@ int Curl_pipe(curl_socket_t socks[2], bool nonblocking);
 
 #if defined(USE_UNIX_SOCKETS) && defined(HAVE_SOCKETPAIR)
 #define SOCKETPAIR_FAMILY AF_UNIX
-#elif !defined(HAVE_SOCKETPAIR)
+#elif !defined(HAVE_SOCKETPAIR) || defined(CURL_DISABLE_SOCKETPAIR)
 #define SOCKETPAIR_FAMILY 0 /* not used */
 #else
 #error "unsupported Unix domain and socketpair build combo"

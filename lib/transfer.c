@@ -39,7 +39,7 @@
 #ifdef HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>
 #endif
-#ifndef UNDER_CE
+#if !defined(UNDER_CE) && !defined(__scarlet__)
 #if defined(HAVE_SIGNAL) && defined(SIGPIPE) && !defined(HAVE_MSG_NOSIGNAL)
 #include <signal.h>
 #endif

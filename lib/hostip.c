@@ -44,7 +44,7 @@
 #ifdef USE_ALARM_TIMEOUT
 #include <setjmp.h>
 #endif
-#ifndef UNDER_CE
+#if !defined(UNDER_CE) && !defined(__scarlet__)
 #ifdef USE_ALARM_TIMEOUT
 #include <signal.h>
 #endif
